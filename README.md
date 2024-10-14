@@ -22,13 +22,13 @@ cd /var/www/chagpt
 ```
 Start the Next.js app using pm2:
 ```
-pm2 start npm --name "chagpt" -- start
+sudo -u nodejs pm2 start npm --name "chagpt" -- start
 ```
 The command above should start the app already. To ensure it starts on boot, run:
 ```
-pm2 startup
+sudo -u nodejs pm2 startup
 ```
 Finally, save current process
 ```
-pm2 save
+sudo -u nodejs pm2 save
 ```
