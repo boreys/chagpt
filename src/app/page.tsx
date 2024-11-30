@@ -1,6 +1,6 @@
 'use client'
 
-import { ArrowRight, CheckCircle, Mail, MapPin, Phone } from "lucide-react"
+import { ArrowRight, CheckCircle, Mail, MapPin, Phone, CalendarCheck2, UserCheck } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { useEffect } from "react"
@@ -9,20 +9,18 @@ import Header from './header'
 
 export default function LandingPage() {
   return (
-    <>
     <main className="flex-grow-1">
       <section className="py-5 py-md-7">
         <div className="container">
           <div className="row align-items-center">
             <div className="col-lg-6 mb-4 mb-lg-0">
-              <h1 className="display-4 fw-bold mb-3">AI Chatbot for Customer Service</h1>
-              <p className="lead mb-4">Demo of AI Chatbot for automated customer service created with MyBotChat</p>
+              <h1 className="display-4 fw-bold mb-3">AI Chatbot for Better Customer Service</h1>
+              <p className="lead mb-4">Build custom AI Chatbot to help your support team provide better customer service</p>
               <div className="d-flex flex-column flex-sm-row gap-2">
-                <button className="btn btn-primary">
+                <a href="https://mybot.chat/?src=chagpt" className="btn btn-primary" role="button">
                   Get Started
                   <ArrowRight className="ms-2" size={16} />
-                </button>
-                <button className="btn btn-outline-secondary">Learn More</button>
+                </a>
               </div>
             </div>
             <div className="col-lg-6">
@@ -38,36 +36,64 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <section id="features" className="py-5 bg-light">
+      <section id="features" className="py-5">
         <div className="container">
           <h2 className="text-center mb-5">Features</h2>
           <div className="row">
             <div className="col-md-4 mb-4 mb-md-0">
               <div className="text-center">
-                <div className="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style={{ width: "64px", height: "64px" }}>
+                <div className="bg-secondary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style={{ width: "64px", height: "64px" }}>
                   <CheckCircle size={32} />
                 </div>
-                <h3 className="h4 mb-3">Server-Side Rendering</h3>
-                <p className="text-muted">Improve performance and SEO with server-side rendering capabilities.</p>
+                <h3 className="h4 mb-3">No-code Chatbot Builder</h3>
+                <p className="text-start">Build AI Chatbot without writing code. Anyone can do it in minutes.</p>
               </div>
             </div>
             <div className="col-md-4 mb-4 mb-md-0">
               <div className="text-center">
-                <div className="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style={{ width: "64px", height: "64px" }}>
-                  <CheckCircle size={32} />
+                <div className="bg-secondary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style={{ width: "64px", height: "64px" }}>
+                  <UserCheck size={32} />
                 </div>
-                <h3 className="h4 mb-3">Fast Refresh</h3>
-                <p className="text-muted">Instantly see your changes with Next.js Fast Refresh feature.</p>
+                <h3 className="h4 mb-3">Customer Service</h3>
+                <p className="tex-start">Use AI Chatbot to help your customer service team improve customer satisfaction for your business</p>
               </div>
             </div>
             <div className="col-md-4">
               <div className="text-center">
-                <div className="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style={{ width: "64px", height: "64px" }}>
-                  <CheckCircle size={32} />
+                <div className="bg-secondary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style={{ width: "64px", height: "64px" }}>
+                  <CalendarCheck2 size={32} />
                 </div>
-                <h3 className="h4 mb-3">API Routes</h3>
-                <p className="text-muted">Build API endpoints easily with Next.js API Routes.</p>
+                <h3 className="h4 mb-3">Collect Feedback</h3>
+                <p className="text-start">Get user feedback with contact information captured by AI Chatbot.</p>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="benefits" className="py-5">
+        <div className="container">
+          <h2 className="text-center mb-5">Benefits For Business</h2>
+          <div className="row">
+            <div className="col-sm-12 col-md-6">
+              <img src="/img/benefit-support.jpeg" alt="benefit on customer service" className="rounded mx-auto d-block img-fluid" />
+            </div>
+            <div className="col-sm-12 col-md-6 text-center">
+              <h2>Improve Customer Support</h2>
+              <p className="text-start">
+              AI Chatbot can answer customer's questions instantly, anytime, reducing wait times and frustration. This frees up human agents to tackle more intricate issues that require a personal touch.
+              </p>
+            </div>
+          </div>
+          <div className="row py-4">
+            <div className="col-sm-12 col-md-6 text-center">
+              <h2>Lead Generation</h2>
+              <p className="text-start">
+              AI Chatbot can engage website visitors in real-time and qualify leads by asking strategic questions. This allows businesses to identify potential customers early on and nurture them through the sales funnel.
+              </p>
+            </div>
+            <div className="col-sm-12 col-md-6">
+              <img src="/img/benefit-lead-generation.png" alt="benefit on customer service" className="rounded mx-auto d-block img-fluid" />
             </div>
           </div>
         </div>
@@ -87,8 +113,8 @@ export default function LandingPage() {
                   className="rounded-circle mb-3"
                 />
                 <h3 className="h5 mb-1">Alice Johnson</h3>
-                <p className="text-muted mb-3">CEO, TechCorp</p>
-                <p className="text-muted">"MyBot.Chat's AI took my website from crickets to conversations! 24/7 support & happy customers."</p>
+                <p className="mb-3">CEO, TechCorp</p>
+                <p className="text-start">"MyBot.Chat's AI took my website from crickets to conversations! 24/7 support & happy customers."</p>
               </div>
             </div>
             <div className="col-md-4 mb-4 mb-md-0">
@@ -101,8 +127,8 @@ export default function LandingPage() {
                   className="rounded-circle mb-3"
                 />
                 <h3 className="h5 mb-1">Bob Smith</h3>
-                <p className="text-muted mb-3">CTO, InnovateCo</p>
-                <p className="text-muted">"AI is a lifesaver! Answers customer questions 24/7 & frees me up for tougher tasks. Love the easy setup - no coding needed!"</p>
+                <p className="mb-3">CTO, InnovateCo</p>
+                <p className="text-start">"AI is a lifesaver! Answers customer questions 24/7 & frees me up for tougher tasks. Love the easy setup - no coding needed!"</p>
               </div>
             </div>
             <div className="col-md-4">
@@ -115,50 +141,23 @@ export default function LandingPage() {
                   className="rounded-circle mb-3"
                 />
                 <h3 className="h5 mb-1">Carol Davis</h3>
-                <p className="text-muted mb-3">Lead Developer, WebSolutions</p>
-                <p className="text-muted">"MyBot.Chat's AI saved my team hours! It answers customer questions & frees us for complex issues. Night & day support, a lifesaver!"</p>
+                <p className="mb-3">Lead Developer, WebSolutions</p>
+                <p className="text-start">"MyBot.Chat's AI saved my team hours! It answers customer questions & frees us for complex issues. Night & day support, a lifesaver!"</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="contact" className="py-5 bg-light">
+      <section id="contact" className="py-5">
         <div className="container">
-          <h2 className="text-center mb-5">Contact Us</h2>
           <div className="row justify-content-center">
             <div className="col-md-6">
-              <form>
-                <div className="mb-3">
-                  <input type="text" className="form-control" placeholder="Name" />
-                </div>
-                <div className="mb-3">
-                  <input type="email" className="form-control" placeholder="Email" />
-                </div>
-                <div className="mb-3">
-                  <textarea className="form-control" rows={3} placeholder="Message"></textarea>
-                </div>
-                <button type="submit" className="btn btn-primary w-100">Send Message</button>
-              </form>
-              <div className="mt-4">
-                <div className="d-flex align-items-center mb-2">
-                  <MapPin size={20} className="me-2" />
-                  <span>123 Main St, Anytown, USA 12345</span>
-                </div>
-                <div className="d-flex align-items-center mb-2">
-                  <Phone size={20} className="me-2" />
-                  <span>+1 (555) 123-4567</span>
-                </div>
-                <div className="d-flex align-items-center">
-                  <Mail size={20} className="me-2" />
-                  <span>contact@example.com</span>
-                </div>
-              </div>
+              <a href="https://mybot.chat/?src=chagpt" type="button" className="btn btn-primary w-100">Get Started Now</a>
             </div>
           </div>
         </div>
       </section>
     </main>
-    </>
   )
 }

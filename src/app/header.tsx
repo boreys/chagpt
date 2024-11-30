@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Header(){
     return (
-          <nav className="navbar navbar-expand-md sticky-top bg-light border-bottom">
+          <nav className="navbar navbar-expand-md sticky-top border-bottom bg-body-tertiary">
             <div className="container">
               <Link className="navbar-brand" href="/">
                 ChaGPT
@@ -19,13 +19,10 @@ export default function Header(){
                     <Link className="nav-link" href="/#testimonials">Testimonials</Link>
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link" href="/#contact">Contact</Link>
-                  </li>
-                  <li className="nav-item">
-                    <Link className="nav-link" href="/about">About</Link>
+                    <Link className="nav-link" href="https://mybot.chat/blogs?src=chagpt">Blog</Link>
                   </li>
                 </ul>
-                <button className="btn btn-primary btn-sm">Get Started</button>
+                <a href="https://mybot.chat/?src=chagpt" className="btn btn-primary btn-sm" role="button">Get Started</a>
               </div>
             </div>
           </nav>
